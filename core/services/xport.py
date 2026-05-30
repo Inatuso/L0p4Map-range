@@ -21,9 +21,9 @@ class XPortService(Service):
         probe = self._fetch(base_url.rstrip("/") + self.config_path, session)
         if self._matches(probe):
             return True
-        # The path itself is unique to Lantronix — 401 is a strong signal
-        if probe is not None and probe.status_code == 401:
-            return True
+        # 401 on the XPort-specific path is a signal only when the root also
+        # returned 401 (device is auth-gated across the board) — skip the
+        # heuristic entirely to avoid false positives on other 401-only servers.
         return False
 
     # Default Basic Auth try_login() inherited from Service.
