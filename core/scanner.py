@@ -597,6 +597,8 @@ def scan_network(
                 "snmp_desc": "",
                 "services_detected": [],
                 "creds_found": [],
+                "scan_mode": "arp",
+                "hops": [],
             }
         )
 
