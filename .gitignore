@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+.venv
+venv/
+*.egg-info/
+dist/
+build/
+.DS_Store
+
+# Real embedded-service credentials — never commit. Examples (*.creds.example.json) are fine.
+*.creds.json
