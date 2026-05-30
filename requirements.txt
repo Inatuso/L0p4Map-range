@@ -1,5 +1,6 @@
 scapy
 requests
+urllib3
 psutil
 PyQt6
 PyQt6-WebEngine
